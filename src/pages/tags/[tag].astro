@@ -22,14 +22,18 @@ const filteredPosts = posts.filter(post =>
 ---
 
 <Layout title={tag}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {
-      filteredPosts.map(post => (
-        <li>
-          <a href={post.url}>{post.frontmatter.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <body>
+    <main>
+      <p>Posts tagged with {tag}</p>
+      <ul>
+        {
+          filteredPosts.map(post => (
+            <li>
+              <a href={post.url}>{post.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </body>
 </Layout>
